@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+quiz-app/node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+.env.local
+
+# IDE settings
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
