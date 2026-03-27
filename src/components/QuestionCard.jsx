@@ -7,7 +7,7 @@ function normalizeMedia(photo) {
   return photo;
 }
 
-export default function QuestionCard({ photo, alt, genre, onStateChange }) {
+export default function QuestionCard({ photo, alt, genre, onStateChange, isAdmin }) {
   const [countdown, setCountdown] = useState(3);
   const [blackScreen, setBlackScreen] = useState(false);
   const [showName, setShowName] = useState(false);
@@ -39,6 +39,14 @@ export default function QuestionCard({ photo, alt, genre, onStateChange }) {
     setShowWarning(genre === "logo");
     setWarningFading(false);
     setControlsVisible(false);
+
+    // Admin 모드: 카운트다운 없이 바로 사진 표시
+    if (isAdmin) {
+      setCountdown(0);
+      setShowWarning(false);
+      setControlsVisible(true);
+      return () => { timersRef.current.active = false; };
+    }
 
     const initialDelay = genre === "logo" ? 1000 : 500;
 
@@ -130,6 +138,7 @@ export default function QuestionCard({ photo, alt, genre, onStateChange }) {
       setControlsVisible(false);
       return;
     }
+    setBlackScreen(true);
     setShowName(true);
   }
 

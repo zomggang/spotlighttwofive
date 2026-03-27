@@ -8,7 +8,7 @@ function shuffleArray(arr) {
     .map((a) => a[1]);
 }
 
-export default function Quiz({ questions = [], onBack, viewedIds = new Set(), onViewedUpdate }) {
+export default function Quiz({ questions = [], onBack, viewedIds = new Set(), onViewedUpdate, isAdmin }) {
   const [finished, setFinished] = useState(false);
   const [sessionViewedIds, setSessionViewedIds] = useState(new Set());
 
@@ -89,6 +89,7 @@ export default function Quiz({ questions = [], onBack, viewedIds = new Set(), on
         alt={current.name}
         genre={current.genre}
         onStateChange={nextQuestion}
+        isAdmin={isAdmin}
       />
     </div>
   );

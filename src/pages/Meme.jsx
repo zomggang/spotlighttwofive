@@ -11,8 +11,11 @@ export default function Meme() {
       <header style={{marginBottom:12}}>
         <h2>빛나는 밈 퀴즈</h2>
         <p>다양한 포맷의 미디어(이미지, GIF, 비디오, 유튜브)를 확인해보세요.</p>
+        <button className="home-back-button" onClick={() => navigate("/")}>
+          ← 홈으로
+        </button>
       </header>
-      <Quiz questions={memes} onBack={() => navigate(-1)} />
+      <Quiz questions={memes} onBack={() => navigate("/")} />
     </div>
   );
 }

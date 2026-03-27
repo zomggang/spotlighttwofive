@@ -96,9 +96,29 @@ button{font-family:inherit}
 .next-button:active{transform:translateY(0)}
 footer{margin-top:12px;text-align:center;color:#999;font-size:11px}
 
+/* 가사 퀴즈 */
+.lyrics-quiz{display:flex;flex-direction:column;gap:12px}
+.lyrics-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+.lyrics-header{text-align:center;margin-bottom:20px;padding-bottom:16px;border-bottom:2px solid #f0e0f0}
+.lyrics-title{font-size:22px;font-weight:800;color:#333}
+.lyrics-artist{font-size:14px;color:#999;margin-top:4px}
+.lyrics-lines{min-height:120px;display:flex;flex-direction:column;gap:10px;padding:8px 0}
+.lyrics-line{padding:10px 16px;border-radius:10px;font-size:17px;font-weight:600;transition:all 0.3s}
+.lyrics-line--current{background:linear-gradient(135deg,#ff6b9d,#ff4081);color:#fff;box-shadow:0 4px 14px rgba(255,107,157,0.35);transform:scale(1.02)}
+.lyrics-line--past{background:#f8f0f5;color:#888;font-size:14px}
+.lyrics-hint{color:#bbb;font-size:14px;text-align:center;padding:24px 0}
+.confirm-box{background:#fff;border-radius:20px;padding:40px 32px;text-align:center;box-shadow:0 8px 32px rgba(255,107,157,0.18);max-width:340px;width:100%}
+.confirm-title{font-size:22px;font-weight:800;color:#333;line-height:1.5;margin:0}
+.lyrics-answer-screen{background:#111;border-radius:16px;padding:48px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.lyrics-answer-title{font-size:36px;font-weight:800;color:#fff}
+.lyrics-answer-artist{font-size:20px;color:#ff6b9d;font-weight:600}
+
 .landing{padding:36px 12px}
 .landing h1{font-size:32px;margin:0 0 8px}
 .landing p{margin:0 0 18px;color:#666}
 .landing-cta{display:inline-block;padding:14px 22px;background:linear-gradient(135deg,#ff7bb0,#ff5a96);color:#fff;border-radius:14px;font-weight:800;text-decoration:none;box-shadow:0 8px 20px rgba(255,107,157,0.18);transition:transform .18s,box-shadow .18s}
 .landing-cta:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(255,107,157,0.28)}
 .landing-cta:active{transform:translateY(0)}
+.landing-cta--lyrics{background:linear-gradient(135deg,#7bb8ff,#5a9eff)}
+.home-back-button{display:inline-block;margin-top:8px;padding:5px 14px;font-size:12px;background:#555;color:#fff;border:none;border-radius:6px;cursor:pointer;font-family:inherit;transition:background .15s}
+.home-back-button:hover{background:#333}
